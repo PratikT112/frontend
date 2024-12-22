@@ -9,24 +9,28 @@ const Header = () => {
     <header>
       <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
         <Container>
-          <Navbar.Brand>
-            <NavLink to="/">
+          <NavLink to="/">
+            <Navbar.Brand>
               <img src={logo} alt="ProShop Logo" />
               ProShop
-            </NavLink>
-          </Navbar.Brand>
+            </Navbar.Brand>
+          </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/cart">
-                <FaShoppingCart />
-                Cart
-              </Nav.Link>
+              <NavLink to="/cart">
+                <Nav.Link>
+                  <FaShoppingCart />
+                  Cart
+                </Nav.Link>
+              </NavLink>
 
-              <Nav.Link href="/login">
-                <FaUser />
-                Sign In
-              </Nav.Link>
+              <NavLink to="/login">
+                <Nav.Link>
+                  <FaUser />
+                  Sign In
+                </Nav.Link>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
